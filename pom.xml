@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>io.simple-rpg</groupId>
 	<artifactId>api-rpg</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>api-rpg</name>
 	<description>api-rpg</description>
 	<properties>
