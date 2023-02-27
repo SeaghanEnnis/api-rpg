@@ -37,7 +37,7 @@ public class GenerateResponse {
                 return "You here the gong ring through the hall. It is the hour of refreshment, selected from the peak of the day, as the sun is at its warmest.\n" +
                        "Ready to quench your thirst and satiate your stomach, you march to the mess hall. As with all good meals, you pause to thank the grandmasters, mentally, for their generosity.\n"+
                        "Navoreen, the holy priest, calls out: let us bow our heads and thank, him, the greatest architect for our blessings today.\n" +
-                       "The crowd bows there head as the priest prays for good and plenty.\n"+
+                       "The crowd bows their heads as the priest prays for good and plenty.\n"+
                        "\"May the great architect of the universe watch over our efforts. May he bless our work and nourish us with his wine and water, his grain and stock, his plums and apples.\n" +
                        "May he help us patch every torn cloth, fix every splintered tool, and hew every stone. And may we all after our six days of labor, find a day of 'relief'.";
             default:
