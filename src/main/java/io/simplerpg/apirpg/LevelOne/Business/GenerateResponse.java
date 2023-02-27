@@ -23,6 +23,8 @@ public class GenerateResponse {
                 return "The stone is heavy, but nothing the wooden sled and strong fellows could not handle.\n" +
                        "You all continue on, during the progress of the morning. The wise King Soloman knows the heat of the day would be too much to labour under.\n" +
                        "Once you have reached the place of the temple, you put the stone in order. The fourth block of your work.";
+            case PartFour:
+                return "";
             default:
                 throw new Exception("Could not find valid response");
         }

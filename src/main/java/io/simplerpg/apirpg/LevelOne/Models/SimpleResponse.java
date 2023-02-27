@@ -1,5 +1,5 @@
 package io.simplerpg.apirpg.LevelOne.Models;
 
 public enum SimpleResponse {
-    Welcome, PartOne, Part2, PartThree
+    Welcome, PartOne, Part2, PartThree, PartFour
 }
