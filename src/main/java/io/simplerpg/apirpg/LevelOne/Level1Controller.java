@@ -24,34 +24,30 @@ public class Level1Controller {
     @GetMapping("/Welcome")
     public ResponseEntity<String> welcome(){
         
-        HttpHeaders responseHeaders = new HttpHeaders();
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.Welcome), responseHeaders, HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<String>("", responseHeaders, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @GetMapping("/PartOne")
     public ResponseEntity<String> partOne(){
         
-        HttpHeaders responseHeaders = new HttpHeaders();
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartOne), responseHeaders, HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartOne), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<String>("", responseHeaders, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     
     @GetMapping("/Part2")
     public ResponseEntity<String> part2(){
-        
-        HttpHeaders responseHeaders = new HttpHeaders();
-
+    
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.Part2), responseHeaders, HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.Part2), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<String>("", responseHeaders, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
