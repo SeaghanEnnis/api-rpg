@@ -1,4 +1,4 @@
-package io.simplerpg.apirpg.LevelOne.Business;
+package io.simplerpg.apirpg.levelone.business;
 
 import org.springframework.stereotype.Component;
 

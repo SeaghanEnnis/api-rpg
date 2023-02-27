@@ -1,8 +1,8 @@
-package io.simplerpg.apirpg.LevelOne.Business;
+package io.simplerpg.apirpg.levelone.business;
 
 import org.springframework.stereotype.Component;
 
-import io.simplerpg.apirpg.LevelOne.Models.SimpleResponse;
+import io.simplerpg.apirpg.levelone.models.SimpleResponse;
 
 @Component
 public class GenerateResponse {
