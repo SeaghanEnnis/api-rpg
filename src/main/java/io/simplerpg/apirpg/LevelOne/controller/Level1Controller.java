@@ -114,7 +114,7 @@ public class Level1Controller {
         }
     }
 
-    @PatchMapping("/PartSize")
+    @PatchMapping("/PartSix")
     public ResponseEntity<String> partSix(@RequestBody String body){
         logger.info(body);
 
