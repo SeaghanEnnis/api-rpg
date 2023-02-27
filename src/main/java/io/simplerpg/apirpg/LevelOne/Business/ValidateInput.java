@@ -14,8 +14,22 @@ public class ValidateInput {
         }
     }
 
-    public String validatePartFour(String body){
-        return "";
+    public String validatePartFour(String body) throws Exception{
+
+        if(body.equals("stone in order")){
+            return "stone in order";
+        }else{
+            throw new Exception("Error in Part Three Validation!");
+        }
+    }
+
+    public String validatePartFive(String body) throws Exception{
+
+        if(body.equals("2756")){
+            return "2756";
+        }else{
+            throw new Exception("Error in Part Three Validation!");
+        }
     }
     
 }

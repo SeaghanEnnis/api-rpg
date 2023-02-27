@@ -31,7 +31,8 @@ public class GenerateResponse {
                        "Corinthian and Composite columns had the most intricacies and beauty. Work on them was reservered for masters.\n" +
                        "Ionic columns were a favorite of King Soloman, denoting wisdom and justice. Work was reserved for fellows.\n" +
                        "Lastly were Doric or Tuscan columns, simple and strong. To advance from an apprentice to a fellow, the apprentice would create one of these columns.\n" +
-                       "For each Corinthian column, there were two Ionic colums, and for each of those four Doric columns. With 9646 total columns, you wonder how many are Ionic?";
+                       "For each Corinthian column, there were two Ionic colums, and for each of those four Doric columns. With 9646 total columns, you wonder how many are Ionic?\n" +
+                       "This simple math would be easy for master, who could post such answers in a mere five seconds.";
             default:
                 throw new Exception("Could not find valid response");
         }

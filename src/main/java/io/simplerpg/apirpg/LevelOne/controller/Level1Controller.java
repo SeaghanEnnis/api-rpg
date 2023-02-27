@@ -80,6 +80,8 @@ public class Level1Controller {
 
     @PutMapping("/PartFour")
     public ResponseEntity<String> partFour(@RequestBody String body){
+        final Logger logger = LoggerFactory.getLogger(Level1Controller.class);
+        logger.info(body);
 
         try{
             inputValidator.validatePartFour(body);
@@ -88,7 +90,25 @@ public class Level1Controller {
         }
 
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartFour), new HttpHeaders(), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PutMapping("/PartFive")
+    public ResponseEntity<String> partFive(@RequestBody String body){
+        final Logger logger = LoggerFactory.getLogger(Level1Controller.class);
+        logger.info(body);
+
+        try{
+            inputValidator.validatePartFive(body);
+        }catch (Exception e) {
+            return new ResponseEntity<String>("Incorrect", new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
+
+        try {
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartFive), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
