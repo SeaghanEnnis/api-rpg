@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -56,6 +57,18 @@ public class Level1Controller {
 
     @PostMapping("/PartThree")
     public ResponseEntity<String> partThree(@RequestBody String body){
+        
+        HttpHeaders responseHeaders = new HttpHeaders();
+
+        try {
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), responseHeaders, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("", responseHeaders, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PutMapping("/PartThree")
+    public ResponseEntity<String> partFour(@RequestBody String body){
         
         HttpHeaders responseHeaders = new HttpHeaders();
 
