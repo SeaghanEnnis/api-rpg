@@ -1,9 +1,17 @@
 package io.simplerpg.apirpg.LevelOne.Business;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ValidateInput {
 
-    public String validatePartThree(String body){
-        return "";
+    public String validatePartThree(String body) throws Exception{
+
+        if(body.equals(" ")){
+            return " ";
+        }else{
+            throw new Exception("Error in Part Three Validation!");
+        }
     }
 
     public String validatePartFour(String body){

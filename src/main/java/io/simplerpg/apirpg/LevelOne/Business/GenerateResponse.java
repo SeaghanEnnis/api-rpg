@@ -18,13 +18,13 @@ public class GenerateResponse {
                        "You look down the rock, mishapened and rugged. 2 parts jutting out from the middle of the width lead you onward.";
             case Part2:
                 return "You begrudingly acknowledge the correctness of your fellow, striking the rock again and again till the stone becomes flat.\n" +
-                       "You, with the help of three fellows, slide the stone to your empty post";
+                       "You, with the help of three fellows, slide the stone, into an empty space, next to your empty post.";
             case PartThree:
                 return "The stone is heavy, but nothing the wooden sled and strong fellows could not handle.\n" +
                        "You all continue on, during the progress of the morning. The wise King Soloman knows the heat of the day would be too much to labour under.\n" +
                        "Once you have reached the place of the temple, you put the stone in order. The fourth block of your work.";
             case PartFour:
-                return "";
+                return "  ";
             default:
                 throw new Exception("Could not find valid response");
         }

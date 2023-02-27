@@ -1,5 +1,7 @@
 package io.simplerpg.apirpg.LevelOne;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import io.simplerpg.apirpg.LevelOne.Business.GenerateResponse;
+import io.simplerpg.apirpg.LevelOne.Business.ValidateInput;
 import io.simplerpg.apirpg.LevelOne.Models.SimpleResponse;
 
 @Controller
@@ -20,6 +23,10 @@ public class Level1Controller {
 
     @Autowired
     GenerateResponse responseGenerator;
+
+    @Autowired
+    ValidateInput inputValidator;
+
 
     @GetMapping("/Welcome")
     public ResponseEntity<String> welcome(){
@@ -54,6 +61,15 @@ public class Level1Controller {
     @PostMapping("/PartThree")
     public ResponseEntity<String> partThree(@RequestBody String body){
 
+        final Logger logger = LoggerFactory.getLogger(Level1Controller.class);
+        logger.info(body);
+
+        try{
+            inputValidator.validatePartThree(body);
+        }catch (Exception e) {
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
+
         try {
             return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
@@ -61,7 +77,8 @@ public class Level1Controller {
         }
     }
 
-    @PutMapping("/PartThree")
+
+    @PutMapping("/PartFour")
     public ResponseEntity<String> partFour(@RequestBody String body){
 
         try {
