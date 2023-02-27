@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -108,6 +109,23 @@ public class Level1Controller {
 
         try {
             return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartFive), new HttpHeaders(), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PatchMapping("/PartSize")
+    public ResponseEntity<String> partSix(@RequestBody String body){
+        logger.info(body);
+
+        try{
+            inputValidator.validatePartSix(body);
+        }catch (Exception e) {
+            return new ResponseEntity<String>("Incorrect", new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
+
+        try {
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartSix), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
