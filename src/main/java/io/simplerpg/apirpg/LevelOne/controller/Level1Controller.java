@@ -27,6 +27,8 @@ public class Level1Controller {
     @Autowired
     ValidateInput inputValidator;
 
+    final Logger logger = LoggerFactory.getLogger(Level1Controller.class);
+
 
     @GetMapping("/Welcome")
     public ResponseEntity<String> welcome(){
@@ -61,7 +63,6 @@ public class Level1Controller {
     @PostMapping("/PartThree")
     public ResponseEntity<String> partThree(@RequestBody String body){
 
-        final Logger logger = LoggerFactory.getLogger(Level1Controller.class);
         logger.info(body);
 
         try{
@@ -80,7 +81,6 @@ public class Level1Controller {
 
     @PutMapping("/PartFour")
     public ResponseEntity<String> partFour(@RequestBody String body){
-        final Logger logger = LoggerFactory.getLogger(Level1Controller.class);
         logger.info(body);
 
         try{
@@ -98,7 +98,6 @@ public class Level1Controller {
 
     @PutMapping("/PartFive")
     public ResponseEntity<String> partFive(@RequestBody String body){
-        final Logger logger = LoggerFactory.getLogger(Level1Controller.class);
         logger.info(body);
 
         try{
