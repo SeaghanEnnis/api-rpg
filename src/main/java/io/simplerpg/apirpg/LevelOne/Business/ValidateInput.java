@@ -16,7 +16,7 @@ public class ValidateInput {
 
     public String validatePartFour(String body) throws Exception{
 
-        if(body.equals("stone in order")){
+        if(body.equalsIgnoreCase("stone in order")){
             return "stone in order";
         }else{
             throw new Exception("Error in Part Three Validation!");
