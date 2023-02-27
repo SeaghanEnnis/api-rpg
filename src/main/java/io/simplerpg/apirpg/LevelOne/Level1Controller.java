@@ -53,25 +53,21 @@ public class Level1Controller {
 
     @PostMapping("/PartThree")
     public ResponseEntity<String> partThree(@RequestBody String body){
-        
-        HttpHeaders responseHeaders = new HttpHeaders();
 
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), responseHeaders, HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<String>("", responseHeaders, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @PutMapping("/PartThree")
     public ResponseEntity<String> partFour(@RequestBody String body){
-        
-        HttpHeaders responseHeaders = new HttpHeaders();
 
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), responseHeaders, HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<String>("", responseHeaders, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
