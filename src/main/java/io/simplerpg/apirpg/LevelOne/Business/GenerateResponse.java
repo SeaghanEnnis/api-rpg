@@ -33,6 +33,8 @@ public class GenerateResponse {
                        "Lastly were Doric or Tuscan columns, simple and strong. To advance from an apprentice to a fellow, the apprentice would create one of these columns.\n" +
                        "For each Corinthian column, there were two Ionic colums, and for each of those four Doric columns. With 9646 total columns, you wonder how many are Ionic?\n" +
                        "This simple math would be easy for master, who could post such answers in a mere five seconds.";
+            case PartFive:
+                return " ";
             default:
                 throw new Exception("Could not find valid response");
         }
