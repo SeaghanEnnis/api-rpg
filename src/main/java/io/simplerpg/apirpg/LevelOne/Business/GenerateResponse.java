@@ -42,7 +42,7 @@ public class GenerateResponse {
                        "May he help us patch every torn cloth, fix every splintered tool, and hew every stone. And may we all after our six days of labor, find a day of 'relief'.";
             case PartSix:
                 return "You finish your meal quickly, ready to make your way into the welcoming chamber of the second level. Given to you in hushed wispers last night was the passkey: faber luminis.\n"+
-                       "It is only given to the apprentices who were deemed ready to begin their Doric column. Upon presenting, this password you will be permitted to proceed to your work.";
+                       "It is only given to the apprentices who were deemed ready to begin their Doric column. Upon presenting this password, you will be permitted to proceed to your work.";
             default:
                 throw new Exception("Could not find valid response");
         }
