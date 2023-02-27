@@ -24,7 +24,7 @@ public class GenerateResponse {
                        "You all continue on, during the progress of the morning. The wise King Soloman knows the heat of the day would be too much to labour under.\n" +
                        "Once you have reached the place of the temple, you put the \"stone in order\". The fourth block of your work.";
             case PartFour:
-                return "  ";
+                return "The stone fits well into its place. The stone being in order, the harmony of the structure will not be disturbed.";
             default:
                 throw new Exception("Could not find valid response");
         }
