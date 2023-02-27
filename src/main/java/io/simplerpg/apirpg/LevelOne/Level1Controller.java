@@ -67,7 +67,7 @@ public class Level1Controller {
         try{
             inputValidator.validatePartThree(body);
         }catch (Exception e) {
-            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Incorrect", new HttpHeaders(), HttpStatus.BAD_REQUEST);
         }
 
         try {
@@ -80,6 +80,12 @@ public class Level1Controller {
 
     @PutMapping("/PartFour")
     public ResponseEntity<String> partFour(@RequestBody String body){
+
+        try{
+            inputValidator.validatePartFour(body);
+        }catch (Exception e) {
+            return new ResponseEntity<String>("Incorrect", new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
 
         try {
             return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), new HttpHeaders(), HttpStatus.OK);
