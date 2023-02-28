@@ -2,12 +2,12 @@ package io.simplerpg.apirpg.levelone.business;
 
 import org.springframework.stereotype.Component;
 
-import io.simplerpg.apirpg.levelone.models.SimpleResponse;
+import io.simplerpg.apirpg.levelone.models.Level1SimpleResponse;
 
 @Component
-public class GenerateResponse {
+public class Level1GenerateResponse {
 
-    public String GenerateLevelOneResonse(SimpleResponse response) throws Exception{
+    public String GenerateLevelOneResponse(Level1SimpleResponse response) throws Exception{
         switch(response){
             case Welcome:
                 return "Welcome to API RPG!\n" +

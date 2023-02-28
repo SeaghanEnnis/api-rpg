@@ -3,7 +3,7 @@ package io.simplerpg.apirpg.levelone.business;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ValidateInput {
+public class Level1ValidateInput {
 
     public String validatePartThree(String body) throws Exception{
 

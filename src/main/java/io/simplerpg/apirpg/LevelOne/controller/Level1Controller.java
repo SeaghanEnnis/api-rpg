@@ -14,19 +14,19 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import io.simplerpg.apirpg.levelone.business.GenerateResponse;
-import io.simplerpg.apirpg.levelone.business.ValidateInput;
-import io.simplerpg.apirpg.levelone.models.SimpleResponse;
+import io.simplerpg.apirpg.levelone.business.Level1GenerateResponse;
+import io.simplerpg.apirpg.levelone.business.Level1ValidateInput;
+import io.simplerpg.apirpg.levelone.models.Level1SimpleResponse;
 
 @Controller
 @RequestMapping(value = "/LevelOne")
 public class Level1Controller {
 
     @Autowired
-    GenerateResponse responseGenerator;
+    Level1GenerateResponse responseGenerator;
 
     @Autowired
-    ValidateInput inputValidator;
+    Level1ValidateInput inputValidator;
 
     final Logger logger = LoggerFactory.getLogger(Level1Controller.class);
 
@@ -35,7 +35,7 @@ public class Level1Controller {
     public ResponseEntity<String> welcome(){
         
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResponse(Level1SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -45,7 +45,7 @@ public class Level1Controller {
     public ResponseEntity<String> partOne(){
         
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartOne), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResponse(Level1SimpleResponse.PartOne), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -55,7 +55,7 @@ public class Level1Controller {
     public ResponseEntity<String> part2(){
     
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.Part2), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResponse(Level1SimpleResponse.Part2), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -73,7 +73,7 @@ public class Level1Controller {
         }
 
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartThree), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResponse(Level1SimpleResponse.PartThree), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -91,7 +91,7 @@ public class Level1Controller {
         }
 
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartFour), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResponse(Level1SimpleResponse.PartFour), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -108,7 +108,7 @@ public class Level1Controller {
         }
 
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartFive), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResponse(Level1SimpleResponse.PartFive), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -125,7 +125,7 @@ public class Level1Controller {
         }
 
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResonse(SimpleResponse.PartSix), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelOneResponse(Level1SimpleResponse.PartSix), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
