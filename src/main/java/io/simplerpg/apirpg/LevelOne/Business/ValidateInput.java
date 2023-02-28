@@ -7,7 +7,7 @@ public class ValidateInput {
 
     public String validatePartThree(String body) throws Exception{
 
-        if(body.equals(" ")){
+        if(body.equalsIgnoreCase(" ")){
             return " ";
         }else{
             throw new Exception("Error in Part Three Validation!");
@@ -19,16 +19,25 @@ public class ValidateInput {
         if(body.equalsIgnoreCase("stone in order")){
             return "stone in order";
         }else{
-            throw new Exception("Error in Part Three Validation!");
+            throw new Exception("Error in Part Four Validation!");
         }
     }
 
     public String validatePartFive(String body) throws Exception{
 
-        if(body.equals("2756")){
+        if(body.equalsIgnoreCase("2756")){
             return "2756";
         }else{
-            throw new Exception("Error in Part Three Validation!");
+            throw new Exception("Error in Part Five Validation!");
+        }
+    }
+
+    public String validatePartSix(String body) throws Exception{
+
+        if(body.equalsIgnoreCase("relief")){
+            return "relief";
+        }else{
+            throw new Exception("Error in Part Siz Validation!");
         }
     }
     
