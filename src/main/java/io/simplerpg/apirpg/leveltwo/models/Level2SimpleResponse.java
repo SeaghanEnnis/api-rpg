@@ -1,6 +1,6 @@
 package io.simplerpg.apirpg.leveltwo.models;
 
 public enum Level2SimpleResponse {
-    Welcome, Part1
+    Welcome, Part1, Part2
 }
  
