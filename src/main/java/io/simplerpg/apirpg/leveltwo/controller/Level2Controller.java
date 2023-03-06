@@ -34,5 +34,45 @@ public class Level2Controller {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/Part1")
+    public ResponseEntity<String> part1(){
+        
+        try {
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/Part2")
+    public ResponseEntity<String> part2(){
+        
+        try {
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/Part3")
+    public ResponseEntity<String> part3(){
+        
+        try {
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/Part4")
+    public ResponseEntity<String> part4(){
+        
+        try {
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
     
 }
