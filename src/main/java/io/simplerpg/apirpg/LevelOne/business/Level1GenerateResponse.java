@@ -14,7 +14,7 @@ public class Level1GenerateResponse {
                        "This is a game built around testing your API skills while also providing some puzzles and story!\n" +
                        "Feel free to GET your way to LevelOne/PartOne!";
             case PartOne:
-                return "You remember a time during your apprenticeship. Your fellow repremanding the stone you carved. He stated, \"consistancy is everything in your work\".\n" +
+                return "Your name is Alexander. You remember a time during your apprenticeship. Your fellow repremanding the stone you carved. He stated, \"consistancy is everything in your work\".\n" +
                        "You look down the rock, mishapened and rugged. 2 parts jutting out from the middle of the width lead you onward.";
             case Part2:
                 return "You begrudingly acknowledge the correctness of your fellow, striking the rock again and again till the stone becomes flat.\n" +
@@ -41,7 +41,7 @@ public class Level1GenerateResponse {
                        "\"May the great architect of the universe watch over our efforts. May he bless our work and nourish us with his wine and water, his grain and stock, his plums and apples.\n" +
                        "May he help us patch every torn cloth, fix every splintered tool, and hew every stone. And may we all after our six days of labor, find a day of 'relief'.";
             case PartSix:
-                return "You finish your meal quickly, ready to make your way into the welcoming chamber of the second level. Given to you in hushed wispers last night was the passkey: faber luminis.\n"+
+                return "You finish your meal quickly, ready to make your way into the welcoming chamber of the second level. Given to you in hushed wispers last night was the passkey: luminis.\n"+
                        "It is only given to the apprentices who were deemed ready to begin their Doric column. Upon presenting this password, you will be permitted to proceed to your work.";
             default:
                 throw new Exception("Could not find valid response");
