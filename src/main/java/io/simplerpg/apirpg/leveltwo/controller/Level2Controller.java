@@ -39,7 +39,7 @@ public class Level2Controller {
     public ResponseEntity<String> part1(){
         
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Part1), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -49,7 +49,7 @@ public class Level2Controller {
     public ResponseEntity<String> part2(){
         
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Part2), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -59,7 +59,7 @@ public class Level2Controller {
     public ResponseEntity<String> part3(){
         
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Part3), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -69,7 +69,7 @@ public class Level2Controller {
     public ResponseEntity<String> part4(){
         
         try {
-            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Welcome), new HttpHeaders(), HttpStatus.OK);
+            return new ResponseEntity<String>(responseGenerator.GenerateLevelTwoResponse(Level2SimpleResponse.Part4), new HttpHeaders(), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>("", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
         }

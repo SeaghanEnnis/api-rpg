@@ -37,7 +37,7 @@ public class Level1ValidateInput {
         if(body.equalsIgnoreCase("relief")){
             return "relief";
         }else{
-            throw new Exception("Error in Part Siz Validation!");
+            throw new Exception("Error in Part Six Validation!");
         }
     }
     
